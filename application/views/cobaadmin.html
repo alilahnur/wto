@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard Admin We Tour Organizer</title>
+		<meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link rel="shortcut icon" href="assets/images/ico/logoWe.jpg"> 
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/ico/logoWe.jpg"> 
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/ico/logoWe.jpg"> 
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/ico/logoWe.jpg"> 
+	<link rel="apple-touch-icon-precomposed" href="assets/images/ico/logoWe.jpg">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">Dashboard Admin</a>
+	    </div>
+	    <br>
+	    <br>
+	    <ul class="nav navbar-nav">
+	      <li class="active"><a href="#dashboard">Dashboard</a></li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Paket<span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">List Paket</a></li>
+	          <li><a href="#tambahpaket">Tambah Paket</a></li>
+	        </ul>
+	      </li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Artikel<span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">List Artikel</a></li>
+	          <li><a href="#tambahartikel">Tambah Artikel</a></li>
+	        </ul>
+	      </li>
+	      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Gallery<span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">List Foto</a></li>
+	          <li><a href="#tambahfoto">Tambah Foto</a></li>
+	        </ul>
+	      </li>
+	      <li><a href="#">Pesan</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li class="dropdown"><a class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown" href="#"> Admin We Tour<span class="caret"></span></a>
+		        <ul class="dropdown-menu">
+		          <li><a href="#">Profil</a></li>
+		          <li><a href="#">Logout</a></li>
+		        </ul>
+	      	</li>
+	    </ul>
+
+	  </div>
+	</nav>
+	  
+	<div class="container" id="dashboard">
+	  <h3>Selamat Datang di Dashboard Admin</h3>
+	  <h4>We Tour Organizer</h4>
+	  <p>Anda adalah admin. Anda diberikan layanan tambahan untuk mengatur dan mengupdate website We Tour Organizer.</p>
+	</div>
+	
+	<div id="tambahpaket" class="container">
+		<!-- <?php 
+		echo validation_errors(); 
+		?> --> 
+
+	<!-- <?php echo form_open_multipart('barang/create'); ?> -->
+		<table>
+			<!--<form action="base_url/MyController/create" method="post">-->
+			<!-- helper form, referensi :
+			// https://www.codeigniter.com/userguide3/helpers/form_helper.html-->
+			<h1>Tambah Paket</h1>
+			<br>
+			<div class="form-group">
+			<input class="form-control" type="text" rows="1" name="judulpaket" placeholder="Judul Paket">
+			</div>
+
+			<div class="form-group">
+			<textarea class="form-control" rows="5" name="deskripsipaket" placeholder="Deskripsi Paket"></textarea>
+			</div>
+			 <tr> 
+			  	<td><label for="userfile">Gambar   </label></td>
+			  	<br>
+		    	<td><input type="file" name="userfile" size="20" /></td> 
+		  	</tr> 
+			<tr> 
+		    <td><input type="hidden" name="is_submit" value="1" /></td>
+		    <td colspan="2"><input type="submit" name="submit" value="Tambah"></td> 
+		  </tr> 
+		</table>
+	<!-- <?php echo form_close(); ?><br>
+	<!--</form>-->
+	<!-- <a href="<?php echo site_url('read')  ?>"><button>Read</button></a> -->
+	</div>
+
+
+	<div id="tambahartikel" class="container">
+		<!-- <?php 
+		echo validation_errors(); 
+		?> --> 
+
+	<!-- <?php echo form_open_multipart('barang/create'); ?> -->
+		<table>
+			<!--<form action="base_url/MyController/create" method="post">-->
+			<!-- helper form, referensi :
+			// https://www.codeigniter.com/userguide3/helpers/form_helper.html-->
+			<h1>Tambah Artikel</h1>
+			<br>
+			<div class="form-group">
+			<input class="form-control" type="text" rows="1" name="judulartikel" placeholder="Judul Artikel">
+			</div>
+
+			<div class="form-group">
+			<textarea class="form-control" type="text" rows="2" name="introartikel" placeholder="Intro Artikel"></textarea>
+			</div>
+
+			<div class="form-group">
+			<textarea class="form-control" rows="5" name="deskripsiartikel" placeholder="Deskripsi Artikel"></textarea>
+			</div>
+			 <tr> 
+			  	<td><label for="userfile">Gambar Artikel  </label></td>
+			  	<br>
+		    	<td><input type="file" name="userfile" size="20" /></td> 
+		  	</tr> 
+			<tr> 
+		    <td><input type="hidden" name="is_submit" value="1" /></td>
+		    <td colspan="2"><input type="submit" name="submit" value="Tambah"></td> 
+		  </tr> 
+		</table>
+	<!-- <?php echo form_close(); ?><br>
+	<!--</form>-->
+	<!-- <a href="<?php echo site_url('read')  ?>"><button>Read</button></a> -->
+	</div>
+
+	<div id="tambahfoto" class="container">
+		<!-- <?php 
+		echo validation_errors(); 
+		?> --> 
+
+	<!-- <?php echo form_open_multipart('barang/create'); ?> -->
+		<table>
+			<!--<form action="base_url/MyController/create" method="post">-->
+			<!-- helper form, referensi :
+			// https://www.codeigniter.com/userguide3/helpers/form_helper.html-->
+			<h1>Tambah Foto Gallery</h1>
+			<br>
+			<div class="form-group">
+			<input class="form-control" type="text" rows="1" name="judulfoto" placeholder="Judul Foto">
+			</div>
+
+			 <tr> 
+			  	<td><label for="userfile">Foto Gallery  </label></td>
+			  	<br>
+		    	<td><input type="file" name="userfile" size="20" /></td> 
+		  	</tr> 
+			<tr> 
+		    <td><input type="hidden" name="is_submit" value="1" /></td>
+		    <td colspan="2"><input type="submit" name="submit" value="Tambah"></td> 
+		  </tr> 
+		</table>
+	<!-- <?php echo form_close(); ?><br>
+	<!--</form>-->
+	<!-- <a href="<?php echo site_url('read')  ?>"><button>Read</button></a> -->
+	</div>
+</body>
+</html>
